@@ -1,0 +1,25 @@
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// dimensions
+$headerNavHeight: 4.5rem;
+
+// Colors
+// Primary
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+$grayishBlue: hsl(233, 8%, 62%);
+$lighgrayishBlue: hsl(220, 16%, 96%);
+$verLightGray: hsl(0, 0%, 98%);
+$white: hsl(0%, 0%, 100%);
+
+$linkGradientBorderColor: linear-gradient(to right, $limeGreen, $brightCyan);
+
+$filterDropShadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, .5));
+// Purple borders..
+// border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+
+// fonts
+$font-small: .875rem; //14px
+$font-med: 1.125rem; //18px

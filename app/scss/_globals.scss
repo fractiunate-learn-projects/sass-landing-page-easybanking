@@ -1,0 +1,133 @@
+html {
+    font-size: 100%; //user control the zoom level
+    box-sizing: border-box; //size of elements include padding in final width
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// font-size: 18px --> to rem = /16
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'public-sans', sans-serif;
+    font-size: $font-med;
+    font-weight: 300;
+    color: $grayishBlue;
+    line-height: 1.3;
+    // background-color: $darkBlue;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+// Spacing
+.container {
+    max-width: 69.375rem;
+    margin: 0 auto; //auto center
+    &--pa {
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+    &--py {
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+    }
+    &--px {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+    &--pt {
+        padding-top: 2.25rem;
+    }
+
+    &--pr {
+        padding-right: 1.5rem;
+    }
+
+    &--pb {
+        padding-bottom: 2.25rem;
+    }
+
+    &--pb {
+        padding-left: 1.5rem;
+    }
+}
+
+// Flexbox Styles
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-fd-c {
+        flex-direction: column;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+//  Buttons
+button,
+.button {
+    display: block;
+    height: 1.875;
+    max-inline-size: 250px;
+    padding: 0.875rem 2.1875rem;
+    background: $linkGradientBorderColor;
+    transition: opacity 150ms ease-in-out;
+    border: 0;
+    border-radius: 50px;
+    opacity: 1;
+    font-weight: 300;
+    font-size: $font-small;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0px;
+}
+
+// Visibility
+.hide-for-mobile {
+
+    // hide for tablet and mobile
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+
+    // hide for desktop viewport widths
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}

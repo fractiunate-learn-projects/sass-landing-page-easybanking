@@ -1,0 +1,46 @@
+@keyframes overlay-fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+        opacity: 0;
+        
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        
+    }
+}
+
+@keyframes overlay-fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    99%{
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+
+    }
+
+}
+
+.fade-in {
+    animation: overlay-fade-in 220ms ease-in-out forwards;
+}
+
+.fade-out {
+    animation: overlay-fade-out 220ms ease-in-out forwards;
+}
+
+.has-fade {
+    visibility: hidden;
+}
