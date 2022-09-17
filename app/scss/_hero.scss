@@ -7,22 +7,26 @@
     &__image {
         position: relative;
         background-image: url('/images/bg-intro-mobile.svg');
-
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 19rem;
+        
+        @include breakpoint-up(medium) {
+            min-height: 25rem; //400px
+            background-position: center 70%;
+        }
         @include breakpoint-up(large) {
             flex: 3;
             order: 2;
             min-height: 41rem; //655px
             background-image: none;
         }
-
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        min-height: 19rem;
+        
 
         &::before {
+            
             @include breakpoint-up(large) {
-
                 content: '';
                 position: absolute;
                 width: 140%;
@@ -39,19 +43,22 @@
             content: '';
             position: absolute;
             width: 100%;
-            height: 115%;
+            height: 100%;
             background-image: url('/images/image-mockups.png');
             background-size: 93%;
             background-repeat: no-repeat;
             background-position: center bottom;
 
+            @include breakpoint-up(medium) {
+                background-size: 52%;
+
+            }
             @include breakpoint-up(large) {
-                width: 100%;
-                height: 100%;
-                background-size: 93%;
-                background-repeat: no-repeat;
+                width: 110%;
+                height: 113%;
+                background-size: 100%;
                 background-position: center 150%;
-                left: 31%;
+                left: 26%;
             }
         }
 
@@ -69,16 +76,7 @@
             order: 1;
         }
 
-        h1 {
-            font-weight: 300;
-            font-size: 2.7rem;
-            line-height: 1.15; // longer amnt of height ~~ 1.3/1.5 lh
-            color: $darkBlue;
-            margin-bottom: 1.5rem; //24 /16
-        }
-
         p {
-            line-height: 1.5;
             margin-bottom: 2.25rem; //36 /16
         }
     }
